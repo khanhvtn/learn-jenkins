@@ -1,7 +1,7 @@
 def main_dir = "app-parent"
+node {
 
-pipeline{
-/* Define Stage as Purposes */
+    /* Define Stage as Purposes */
     stage('SCM Checkout') {
         cleanWs()
 
@@ -15,4 +15,5 @@ pipeline{
         }
     }
 }
+
 
