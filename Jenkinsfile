@@ -1,6 +1,8 @@
 def main_dir = "app-parent"
 node {
 
+     agent { docker { image 'node:16.17.1-alpine' } }
+
     /* Define Stage as Purposes */
     stage('SCM Checkout') {
         cleanWs()
@@ -10,7 +12,7 @@ node {
             def gitRepo = checkout scm
             env.GIT_URL = gitRepo.GIT_URL
 
-            sh 'ls'
+            sh 'node -v'
 
         }
     }
