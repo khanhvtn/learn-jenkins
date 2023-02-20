@@ -1,5 +1,6 @@
 def main_dir = "app-parent"
 pipeline {
+    agent any
     stages {
         stage('Build') {
             steps {
