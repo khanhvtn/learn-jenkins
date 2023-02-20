@@ -1,10 +1,9 @@
 def main_dir = "app-parent"
 node {
 
-     agent { docker { image 'node:16.17.1-alpine' } }
-
     /* Define Stage as Purposes */
     stage('SCM Checkout') {
+        agent { docker { image 'node:16.17.1-alpine' } }
         cleanWs()
 
         /** Checkout SCM if use pipeline from SCM */
